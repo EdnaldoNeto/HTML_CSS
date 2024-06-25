@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <style>
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        body {
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário</label> 
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="29" placeholder="Digite nome de usuário" autocomplete="username"> 
+        </p>
+
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="10" maxlength="30" size="30" placeholder="Digite uma senha segura" autocomplete="current-password"> 
+
+            <!-- type password. quando você digitar sua senha na caixa as letras ficarão marcadas com "*".
+             
+            Minlenght - o minimo de caracteres obrigatória para preencher a caixa.
+
+            Maxlenght - o máximo de caracteres obrigatório para preencher a caixa.
+
+            Required - coloca como preenchimento obrigatório a caixa.
+
+            Size - tamanho da caixa.
+
+            placeholder - escrever uma dica transparente dentro da caixa.
+
+            autocomplete - dentro de input, o valor dele tem que ser autoexplicativo para o navegador compreender. 
+            -->
+        </p>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar"> 
+        <!-- type o botão reset - vai limpar as informações da caixa -->
+    </form>
+    
+</body>
+</html>
