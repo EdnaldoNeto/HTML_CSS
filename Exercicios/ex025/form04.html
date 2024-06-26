@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <style>
+        body {
+            background-color: dimgrey;
+        }
+
+        p, legend, h1 {
+            color: white;
+        }
+
+        fieldset {
+            background-color: coral;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Formulário</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        
+        <fieldset>
+             <!-- fieldset vai agrupar o formulário com uma borda me sua volta-->
+
+            <legend>Dados pessoais</legend>
+            <!-- legend  vai colocar uma legenda para o formulário (Um título)-->
+
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required minlength="10" maxlength="30" placeholder="Nome completo">
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="Digite seu e-mail">
+                <!-- Type email - para caixas de e-mail. -->
+            </p>
+            <p>
+               <label for="itel">Telefone:</label>
+               <input type="tel" name="tel" id="itel" required autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx">
+               <!-- Estudar sobre pattern e RegEx-->
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+    
+</body>
+</html>
